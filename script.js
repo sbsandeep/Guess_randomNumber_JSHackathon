@@ -1,4 +1,6 @@
 let guesses_taken = 0;
+const audioWin = document.getElementById("sound");
+const audioLose = document.getElementById("sound2");
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
 console.log("randomNumber: ", randomNumber);
@@ -27,6 +29,7 @@ function checkGuess(event) {
     document.getElementById("attempts").innerHTML = "No of Attempts Taken to guess the random number: " + guesses_taken;
 
     if (user_guessInput === randomNumber) {
+        
         document.getElementById("playAgain").disabled = false;
         document.getElementById("close").disabled = false;
         document.body.style.backgroundColor = "green";    
@@ -34,6 +37,8 @@ function checkGuess(event) {
         document.getElementById("score").innerHTML = "You got it in, "  + guesses_taken  + " guesses.";
         document.getElementById("feedback").innerHTML = "";
         document.getElementById("clapEmoji").style.display = "block";
+        audioWin.play();
+        return;
     } else if (user_guessInput > randomNumber) {
         document.getElementById("feedback").innerHTML = "Error, the number you inserted is greater than the guess, please try again with a lower number!";
     } else {
