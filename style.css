@@ -1,0 +1,71 @@
+body {
+  background-image: url('random2.jpg');
+  background-size:cover;
+  background-position: center;
+  margin: 0;  
+  padding: 0;  
+}
+
+h1 {
+  font-size: 46px;
+  color: #f83e05;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 30px; 
+  color: #a00505;  
+  text-align: center;  
+  margin-top: 10px;  
+  margin-bottom: 10px;  
+}
+form {
+  text-align: center;  
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  margin: 10px;
+  font-size: 24px;
+  width: 200px;  
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Add pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#results {
+  text-align: center; /* Center align results */
+}
+
+#score {
+  color: red;
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+#clapEmoji {
+  font-size: 36px; /* Adjust font size as needed */
+  text-align: center; /* Center clap emoji */
+}
+footer {
+  background-image: url('random1.png');
+  background-color: #96abd8;  
+  color: #fff; 
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
