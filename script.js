@@ -1,10 +1,10 @@
 let guesses_taken = 0;
+let guessedNumbersDisplay = document.getElementById("guessedNumbers");
+let guessedNumbers = []; 
 const audioWin = document.getElementById("sound");
 const audioLose = document.getElementById("sound2");
 let randomNumber = Math.floor(Math.random() * 100) + 1;
-
 console.log("randomNumber: ", randomNumber);
-
 document.addEventListener("DOMContentLoaded", function() {  
     const playButton = document.getElementById("playButton");
     playButton.addEventListener("mouseover", function() {
@@ -27,7 +27,9 @@ function checkGuess(event) {
 
     guesses_taken++;
     document.getElementById("attempts").innerHTML = "No of Attempts Taken to guess the random number: " + guesses_taken;
-
+     
+    guessedNumbers.push(user_guessInput);
+    guessedNumbersDisplay.textContent = guessedNumbers.join(", ");
     if (user_guessInput === randomNumber) {
         
         document.getElementById("playAgain").disabled = false;
